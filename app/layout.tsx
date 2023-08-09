@@ -1,5 +1,7 @@
 import './globals.css'
+import styles from './page.module.css'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,13 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>
-        <nav>My Element</nav>
+      <body className={inter.className}>
+        <nav>
+          <ul className={styles.flex}>
+          <li> <Link href="/">Home</Link></li>
+          <li> <Link href="/about">About</Link></li>
+          <li> <Link href="/users">Users</Link></li>
+           
+          </ul>
+        </nav>
       {children}
         </body>
     </html>

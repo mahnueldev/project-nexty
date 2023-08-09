@@ -270,3 +270,13 @@
     transform: rotate(0deg);
   }
 }
+
+.flex{
+  display:flex;
+  list-style: none;
+  gap: 2rem;
+  width: 100vw;
+  background-color: rgb(218, 218, 218);
+  padding: 1rem;
+  
+  }
