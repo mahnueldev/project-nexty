@@ -5,7 +5,6 @@ export default function AboutLayout({
   }) {
     return (
    <>
-   <nav>About Nav</nav>
    <main >
     {children}
    </main>

@@ -1,7 +1,8 @@
 import './globals.css'
-import styles from './page.module.css'
+import Navbar from './components/Navbar'
+
 import type { Metadata } from 'next'
-import Link from 'next/link'
+
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,15 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className={inter.className}>
-        <nav>
-          <ul className={styles.flex}>
-          <li> <Link href="/">Home</Link></li>
-          <li> <Link href="/about">About</Link></li>
-          <li> <Link href="/users">Users</Link></li>
-           
-          </ul>
-        </nav>
+       <Navbar/>
+       <main className='mx-12 mt-6'>
+
       {children}
+       </main>
         </body>
     </html>
   )

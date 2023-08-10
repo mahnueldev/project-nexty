@@ -8,7 +8,7 @@ export default async function UserPosts({ promise }: Props) {
     const content = posts.map(post => {
         return (
             <article key={post.id}>
-                <h2>{post.title}</h2>
+                <h4 className="font-bold">{post.title}</h4>
                 <p>{post.body}</p>
                 <br />
             </article>
